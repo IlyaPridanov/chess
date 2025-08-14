@@ -1,106 +1,126 @@
 @font-face {
-    font-family: "GolosText";
-    src:
-        url("../fonts/GolosText-Regular.woff2") format("woff2"),
-        url("../fonts/GolosText-Regular.woff") format("woff");
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
+  font-family: "GolosText";
+  src:
+    url("../fonts/GolosText-Regular.woff2") format("woff2"),
+    url("../fonts/GolosText-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: "GolosText";
-    src:
-        url("../fonts/GolosText-Medium.woff2") format("woff2"),
-        url("../fonts/GolosText-Medium.woff") format("woff");
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
+  font-family: "GolosText";
+  src:
+    url("../fonts/GolosText-Medium.woff2") format("woff2"),
+    url("../fonts/GolosText-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: "GolosText";
-    src:
-        url("../fonts/GolosText-Bold.woff2") format("woff2"),
-        url("../fonts/GolosText-Bold.woff") format("woff");
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
+  font-family: "GolosText";
+  src:
+    url("../fonts/GolosText-SemiBold.woff2") format("woff2"),
+    url("../fonts/GolosText-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: "Merriweather";
-    src:
-        url("../fonts/Merriweather-Regular.woff2") format("woff2"),
-        url("../fonts/Merriweather-Regular.woff") format("woff");
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
+  font-family: "GolosText";
+  src:
+    url("../fonts/GolosText-Bold.woff2") format("woff2"),
+    url("../fonts/GolosText-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Merriweather";
+  src:
+    url("../fonts/Merriweather-Regular.woff2") format("woff2"),
+    url("../fonts/Merriweather-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Merriweather";
+  src:
+    url("../fonts/Merriweather-Bold.woff2") format("woff2"),
+    url("../fonts/Merriweather-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }
 
 *,
 *::before,
 *::after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 html {
-    height: 100%;
-    box-sizing: border-box;
+  height: 100%;
+  box-sizing: border-box;
 }
 
 body {
-    position: relative;
-    overflow-x: hidden;
-    display: flex;
-    flex-direction: column;
-    min-width: 320px;
-    min-height: 100%;
-    margin: 0;
-    padding: 0;
-    font-family: "GolosText", "Arial", sans-serif;
-    font-size: 16px;
-    line-height: 1;
-    font-weight: 400;
-    color: #313131;
+  position: relative;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "GolosText", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 400;
+  color: #313131;
 }
 
 main {
-    flex-grow: 1;
+  flex-grow: 1;
 }
 
 header {
-    flex-grow: 0;
+  flex-grow: 0;
 }
 
 footer {
-    flex-grow: 0;
+  flex-grow: 0;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 .visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .hidden {
-    display: none !important;
+  display: none !important;
 }
 
 .container {
@@ -108,6 +128,39 @@ img {
   width: 1260px;
   padding: 0 19px;
   margin: 0 auto;
+}
+
+.h1 {
+  margin: 0;
+
+  font-family: "Merriweather", "Arial", sans-serif;
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.h2 {
+  margin: 0;
+
+  font-family: "Merriweather", "Arial", sans-serif;
+  font-size: 54px;
+  font-weight: 400;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 1024px) {
+  .h1 {
+    font-size: 5.8vw;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .h1 {
+    font-size: 9.6vw;
+    line-height: 1.12;
+  }
 }
 
 /* btn */
@@ -247,12 +300,6 @@ img {
 
 .main-top__caption {
   margin: 0 0 27px;
-
-  font-family: "Merriweather", "Arial", sans-serif;
-  font-size: 60px;
-  font-weight: 400;
-  line-height: 1.1;
-  text-transform: uppercase;
 }
 
 .main-top__caption span {
@@ -282,10 +329,6 @@ img {
 }
 
 @media screen and (max-width: 1024px) {
-  .main-top__caption {
-    font-size: 5.8vw;
-  }
-
   .main-top__column {
     width: 53vw;
   }
@@ -306,9 +349,6 @@ img {
 
   .main-top__caption {
     margin-bottom: 22px;
-
-    font-size: 9.6vw;
-    line-height: 1.12;
   }
 
   .main-top__text {
@@ -396,4 +436,113 @@ img {
     font-size: 16px;
     line-height: 1;
   }
+}
+
+/* event */
+
+.event {
+  margin: 80px 0;
+}
+
+.event__top-row {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+  margin-bottom: 64px;
+}
+
+.event__caption {
+  font-size: 36px;
+  line-height: 1.35;
+}
+
+.event__caption strong {
+  font-weight: 700;
+  color: #F54932;
+}
+
+.event__img {
+  position: relative;
+}
+
+.event__img img {
+  display: block;
+
+  position: absolute;
+  top: -29px;
+  left: -27px;
+  max-width: none;
+}
+
+.event__row {
+  display: grid;
+  grid-template-columns: 1fr 1.49fr;
+  gap: 44px;
+}
+
+.event__list {
+  margin: 60px 0 48px;
+  padding: 0;
+
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+}
+
+.event__list dt {
+  margin: 0;
+  padding: 18px 16px 17px 0;
+
+  font-size: 20px;
+  line-height: 1;
+  font-weight: 400;
+
+  border-right: 2px solid #D0D0D0;
+  border-bottom: 2px solid #D0D0D0;
+}
+
+.event__list dt:first-of-type {
+  padding-top: 0;
+}
+
+.event__list dt:last-of-type {
+  padding-bottom: 0;
+
+  border-bottom: none;
+}
+
+
+.event__list dd {
+  margin: 0;
+  padding: 18px 0 15px 16px;
+
+  font-size: 20px;
+  line-height: 1;
+  font-weight: 600;
+
+  border-bottom: 2px solid #D0D0D0;
+}
+
+.event__list dd:first-of-type {
+  padding-top: 0;
+}
+
+.event__list dd:last-of-type {
+  padding-bottom: 0;
+
+  border-bottom: none;
+}
+
+.event__list span {
+  margin-right: 7px;
+
+  text-decoration: 2px #F54932 line-through;
+}
+
+.event__bottom-link {
+  display: block;
+
+  color: #3057A2;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.2;
 }
