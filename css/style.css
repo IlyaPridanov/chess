@@ -116,7 +116,7 @@ img {
   min-height: 72px;
   width: 263px;
   max-width: 100%;
-  padding: 20px;
+  padding: 17px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -124,9 +124,17 @@ img {
   font-weight: 500;
   font-size: 16px;
   text-align: center;
+  line-height: 1.2;
 
   border-radius: 66px;
   border: none;
+  transition: all 0.3s ease-in;
+}
+
+.btn:hover {
+  cursor: pointer;
+
+  transition: all 0.3s ease-in;
 }
 
 .btn--black {
@@ -135,10 +143,22 @@ img {
   background-color: #1F1F1F;
 }
 
+.btn--black:hover {
+  color: #1F1F1F;
+
+  background-color: #FBCE51;
+}
+
 .btn--transparent {
   color: #1F1F1F;
 
   border: 2px solid #1F1F1F;
+}
+
+.btn--transparent:hover {
+  color: #FFFFFF;
+
+  background-color: #1F1F1F;
 }
 
 /* header */
