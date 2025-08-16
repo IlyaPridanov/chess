@@ -698,11 +698,18 @@ img {
 }
 
 .stages__row::after {
-  content: url("../img/airplane.png");
+  content: "";
 
   position: absolute;
   bottom: -3px;
-  right: -64px;
+  right: -62px;
+
+  pointer-events: none;
+  display: block;
+  width: 400px;
+  height: 235px;
+
+  background: url("../img/airplane.png") no-repeat center/contain;
 }
 
 .stages__item {
@@ -745,7 +752,7 @@ img {
   grid-template-columns: subgrid;
 }
 
-.stages__column + .stages__item {
+.stages__item--two-row {
   grid-row: 1 / 3;
   grid-column: 3 / 4;
 }
@@ -753,4 +760,77 @@ img {
 .stages__row > .stages__item:last-child {
   grid-column: 2 / 4;
   padding: 20px 40% 20px 20px;
+}
+
+@media screen and (max-width: 1360px) {
+  .stages {
+    overflow: hidden;
+  }
+
+  .stages__row > .stages__item:last-child {
+    padding-right: 26vw;
+  }
+
+  .stages__row::after {
+    right: -6vw;
+  }
+}
+
+@media screen and (max-width: 1110px) {
+    .stages__row::after {
+        right: -9vw;
+    }
+
+    .stages__row > .stages__item:last-child {
+        padding-right: 30vw;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+  .stages__row {
+    padding-top: 130px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .stages__item {
+    padding: 20px;
+  }
+
+  .stages__row > .stages__item {
+    grid-column: 1 / 3;
+  }
+
+  .stages__item--two-row {
+    grid-row: initial;
+    grid-column: 1 / 3;
+  }
+
+  .stages__row > .stages__item:last-child {
+    padding: 20px;
+    grid-column: 1 / 3;
+  }
+
+  .stages__row::after {
+    bottom: auto;
+    right: auto;
+    top: -57px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .stages__item p {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .stages__row {
+    display: block;
+  }
+
+  .stages__column {
+    display: block;
+  }
 }
