@@ -187,7 +187,8 @@ img {
   }
 
   .h2 {
-    font-size: 28px;
+    font-size: 36px;
+    line-height: 1.1;
   }
 }
 
@@ -629,7 +630,7 @@ img {
 
 @media screen and (max-width: 576px) {
   .event {
-    margin: 50px 0;
+    margin: 50px 0 122px;
   }
 
   .event__list {
@@ -828,9 +829,34 @@ img {
 @media screen and (max-width: 576px) {
   .stages__row {
     display: block;
+    padding-top: 94px;
+  }
+
+  .stages__caption .link {
+    display: block;
+    margin: 12px 2px 3px 0px;
+    width: 100%;
+  }
+
+  .stages__row::after {
+    top: -47px;
+    left: 53%;
+    width: 352px;
+    height: 215px;
+
+    background: url("../img/airplane-mobile.png") no-repeat center/contain;
+  }
+
+  .stages__item {
+    padding: 63px 20px 32px 20px;
   }
 
   .stages__column {
     display: block;
   }
+
+  .stages__column .stages__item:last-child {
+    padding-top: 0;
+  }
+
 }
