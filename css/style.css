@@ -965,7 +965,7 @@ img {
 /* persons */
 
 .persons {
-  margin-bottom: 140px;
+  margin-bottom: 139px;
 }
 
 .persons__container {
@@ -1057,6 +1057,10 @@ img {
 }
 
 @media screen and (max-width: 576px) {
+  .persons {
+    margin-bottom: 102px;
+  }
+
   .persons__caption {
     margin-bottom: 39px;
   }
@@ -1081,5 +1085,27 @@ img {
   .persons__img {
     height: 244px;
     width: 244px;
+  }
+}
+
+/* footer */
+
+.footer {
+  padding: 40px 0 72px;
+
+  background-color: #E9DED4;
+}
+
+.footer__copyright {
+  margin: 0;
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+@media screen and (max-width: 576px) {
+  .footer {
+    padding-bottom: 60px;
   }
 }
