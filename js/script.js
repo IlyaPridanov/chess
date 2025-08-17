@@ -1,11 +1,17 @@
 document.addEventListener('DOMContentLoaded', function () {
   function getRunningLineClone() {
-    const runningLineContent = document.querySelector('.running-line__content');
+    const runningLineContent = document.querySelectorAll('.running-line__content');
 
-    const texts = document.querySelectorAll('.running-line__text');
-    texts.forEach(text => {
-      const clone = text.cloneNode(true);
-      runningLineContent.appendChild(clone);
+    function runningLineClone(container) {
+      const texts = document.querySelectorAll('.running-line__text');
+      texts.forEach(text => {
+        const clone = text.cloneNode(true);
+        container.appendChild(clone);
+      });
+    }
+
+    runningLineContent.forEach(item => {
+      runningLineClone(item);
     });
   };
 
@@ -45,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function handleSliderForMobile() {
-      if (window.innerWidth <= 576) {
+      if (window.matchMedia("(width <= 576px)").matches) {
         if (!blockSliderInstance) {
           blockSliderInstance = getBlockSlider(sliderContainers);
         }
@@ -61,6 +67,61 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('resize', handleSliderForMobile);
   }
 
+  function getPersonsSlider() {
+    const sliderContainers = document.querySelector('.persons');
+
+    function getBlockSlider(slider) {
+      if (slider) {
+        const container = slider.querySelector('.swiper-container');
+        const slides = slider.querySelectorAll('.swiper-slide');
+        const next = slider.querySelector('.btn-next');
+        const prev = slider.querySelector('.btn-prev');
+        const pagination = slider.querySelector('.swiper-pagination');
+        const loop = true;
+        const direction = 'horizontal';
+        const autoHeight = false;
+        const breakpoints = {
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 7,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 15,
+          },
+          1200: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+        };
+
+        if (slides.length >= 2) {
+          return new window.Swiper(container, {
+            direction: direction,
+            loop: loop,
+            autoHeight: autoHeight,
+            autoplay: true,
+            autoplaySpeed: 4,
+            navigation: {
+              nextEl: next,
+              prevEl: prev,
+            },
+            pagination: {
+              el: pagination,
+              clickable: true,
+              type: 'fraction',
+            },
+            breakpoints: breakpoints,
+          });
+        }
+      }
+    }
+
+    getBlockSlider(sliderContainers);
+
+  }
+
   getRunningLineClone();
   getStagesSlider();
+  getPersonsSlider();
 });
