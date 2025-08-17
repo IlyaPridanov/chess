@@ -855,7 +855,7 @@ img {
 
 @media screen and (max-width: 1024px) {
   .stages__row {
-    padding-top: 130px;
+    padding-top: 182px;
     grid-template-columns: 1fr 1fr;
   }
 
@@ -880,7 +880,7 @@ img {
   .stages__swiper-container::after {
     bottom: auto;
     right: auto;
-    top: -57px;
+    top: -11px;
     left: 50%;
     transform: translateX(-50%);
   }
