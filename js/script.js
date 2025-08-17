@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   };
 
-  function getSlider() {
+  function getStagesSlider() {
     let blockSliderInstance = null;
     const sliderContainers = document.querySelector('.stages');
 
@@ -17,8 +17,8 @@ document.addEventListener('DOMContentLoaded', function () {
       if (slider) {
         const container = slider.querySelector('.swiper-container');
         const slides = slider.querySelectorAll('.swiper-slide');
-        const prev = slider.querySelector('.js-btn-next');
-        const next = slider.querySelector('.js-btn-prev');
+        const next = slider.querySelector('.btn-next');
+        const prev = slider.querySelector('.btn-prev');
         const pagination = slider.querySelector('.swiper-pagination');
         const loop = false;
         const direction = 'horizontal';
@@ -62,5 +62,5 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   getRunningLineClone();
-  getSlider();
+  getStagesSlider();
 });
